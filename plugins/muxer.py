@@ -170,7 +170,7 @@ async def hardmux(client, message):
     start_time = time.time()
     duration = get_media_info(os.path.join(Config.DOWNLOAD_DIR,
                                            final_filename))[0]
-    thumb = take_ss(os.path.join(Config.DOWNLOAD_DIR, final_filename))[0]
+    thumb = take_ss(os.path.join(Config.DOWNLOAD_DIR, final_filename))
     if thumb is not None:
         with Image.open(thumb) as img:
             width, height = img.size
