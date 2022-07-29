@@ -59,7 +59,7 @@ def take_ss(video_file):
     des_dir = 'Thumbnails'
     if not os.path.exists(des_dir):
         os.mkdir(des_dir)
-    des_dir = os.path.join(des_dir, f"{time()}.jpg")
+    des_dir = os.path.join(des_dir, f"{time.time()}.jpg")
     duration = get_media_info(video_file)[0]
     if duration == 0:
         duration = 3
